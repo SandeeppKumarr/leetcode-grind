@@ -4,16 +4,20 @@
  * Language: C++
  * Runtime: N/A
  * Memory: N/A
- * Date: 2026-07-05T12:40:55.042Z
+ * Date: 2026-07-05T12:42:01.440Z
  */
 
 
-        // Determine which is duplicate
-        for (int num : nums) {
-            if (num == x)
-                return new int[]{x, y};
+        // Rightmost set bit
+            xor ^= i;
         }
+        for (int i = 1; i <= n; i++) {
+            xor ^= num;
+        }
+        for (int num : nums) {
+        // XOR all array elements and numbers from 1 to n
 
-        return new int[]{y, x};
-    }
-}
+        int n = nums.length;
+        int xor = 0;
+    public int[] findErrorNums(int[] nums) {
+class Solution {
