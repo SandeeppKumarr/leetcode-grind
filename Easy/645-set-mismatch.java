@@ -3,8 +3,8 @@
  * Difficulty: Easy
  * Language: java
  * Runtime: N/A
- * Memory: N/A
- * Date: 2026-07-05T12:49:08.960Z
+ * Memory: 47.4 MB
+ * Date: 2026-07-05T12:51:48.144Z
  */
 
 class Solution {
