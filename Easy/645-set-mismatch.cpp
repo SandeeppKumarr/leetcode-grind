@@ -4,20 +4,16 @@
  * Language: C++
  * Runtime: N/A
  * Memory: N/A
- * Date: 2026-07-05T12:34:45.759Z
+ * Date: 2026-07-05T12:36:12.764Z
  */
 
-class Solution {
-    public int[] findErrorNums(int[] nums) {
-        int xor = 0;
-        int n = nums.length;
 
-        // XOR all array elements and numbers from 1 to n
+        // Determine which is duplicate
         for (int num : nums) {
-            xor ^= num;
-        }
-        for (int i = 1; i <= n; i++) {
-            xor ^= i;
+            if (num == x)
+                return new int[]{x, y};
         }
 
-        // Rightmost set bit
+        return new int[]{y, x};
+    }
+}
