@@ -2,9 +2,7 @@
  * LeetCode #645: Set Mismatch
  * Difficulty: Easy
  * Language: Java
- * Runtime: N/A
- * Memory: N/A
- * Date: 2026-07-05T13:10:24.794Z
+ * Date: 2026-07-05T13:12:27.078Z
  */
 
 class Solution {
