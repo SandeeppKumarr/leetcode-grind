@@ -4,20 +4,20 @@
  * Language: C++
  * Runtime: N/A
  * Memory: N/A
- * Date: 2026-07-05T12:30:11.629Z
+ * Date: 2026-07-05T12:32:18.187Z
  */
 
-        // Rightmost set bit
+class Solution {
+    public int[] findErrorNums(int[] nums) {
+        int xor = 0;
+        int n = nums.length;
 
-        }
-            xor ^= i;
-        for (int i = 1; i <= n; i++) {
-        }
-            xor ^= num;
         // XOR all array elements and numbers from 1 to n
         for (int num : nums) {
+            xor ^= num;
+        }
+        for (int i = 1; i <= n; i++) {
+            xor ^= i;
+        }
 
-        int n = nums.length;
-        int xor = 0;
-    public int[] findErrorNums(int[] nums) {
-class Solution {
+        // Rightmost set bit
