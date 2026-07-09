@@ -2,49 +2,29 @@
  * LeetCode #645: Set Mismatch
  * Difficulty: Easy
  * Language: Java
- * Date: 2026-07-05T13:39:12.243Z
+ * Date: 2026-07-09T04:46:37.684Z
  */
 
 class Solution {
     public int[] findErrorNums(int[] nums) {
-        int xor = 0;
         int n = nums.length;
-
-        // XOR all array elements and numbers from 1 to n
-        for (int num : nums) {
-            xor ^= num;
+        long sumOfArray = 0;
+        for(int num : nums){
+            sumOfArray += num;
         }
-        for (int i = 1; i <= n; i++) {
-            xor ^= i;
+        long sumOfNatural = (long)n * (n + 1) / 2;
+        long xMinusY = sumOfArray - sumOfNatural;
+
+        long sumOfArray2 = 0;
+        for(int num : nums){
+            sumOfArray2 += (long)num * num;
         }
+        long sumOfNatural2 = (long)n * (n + 1) * (2 * n + 1) / 6;
 
-        // Rightmost set bit
-        int mask = xor & -xor;
+        long xPlusY = (sumOfArray2 - sumOfNatural2) / xMinusY;
 
-        int x = 0, y = 0;
-
-        // Partition array elements
-        for (int num : nums) {
-            if ((num & mask) != 0)
-                x ^= num;
-            else
-                y ^= num;
-        }
-
-        // Partition numbers 1...n
-        for (int i = 1; i <= n; i++) {
-            if ((i & mask) != 0)
-                x ^= i;
-            else
-                y ^= i;
-        }
-
-        // Determine which is duplicate
-        for (int num : nums) {
-            if (num == x)
-                return new int[]{x, y};
-        }
-
-        return new int[]{y, x};
+        int x = (int)((xMinusY + xPlusY) / 2);
+        int y = (int)(xPlusY - x);
+        return new int[]{x,y};
     }
 }
