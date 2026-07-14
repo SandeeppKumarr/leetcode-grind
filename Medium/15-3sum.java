@@ -2,14 +2,15 @@
  * LeetCode #15: 3Sum
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-14T20:30:27.499Z
+ * Date: 2026-07-14T20:31:54.752Z
  */
 
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> result = new ArrayList<>();
-        for(int i = 0; i < nums.length; i++){
+        for(int i = 0; i < nums.length - 2; i++){
+            if(nums[i] > 0) break;
             if(i != 0 && nums[i] == nums[i - 1]) continue;
             int j = i + 1;
             int k = nums.length - 1;
