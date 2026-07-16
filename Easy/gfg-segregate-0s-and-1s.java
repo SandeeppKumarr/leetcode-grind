@@ -2,7 +2,7 @@
  * GeeksForGeeks: Segregate 0s and 1s
  * Difficulty: Easy
  * Language: Java
- * Date: 2026-07-05T01:35:44.074Z
+ * Date: 2026-07-15T01:35:44.074Z
  */
 class Solution {
     void segregate0and1(int[] arr) {
