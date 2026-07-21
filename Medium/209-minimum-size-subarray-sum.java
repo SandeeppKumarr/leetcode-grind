@@ -2,7 +2,7 @@
  * LeetCode #209: Minimum Size Subarray Sum
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-21T17:23:22.886Z
+ * Date: 2026-07-21T17:25:02.329Z
  */
 
 class Solution {
@@ -16,8 +16,7 @@ class Solution {
 
             while (sum >= target) {
                 minLength = Math.min(minLength, right - left + 1);
-                sum -= nums[left];
-                left++;
+                sum -= nums[left++];
             }
         }
 
