@@ -1,5 +1,5 @@
 /**
- * GeeksForGeeks: Segregate 0s and 1s
+ * GeeksForGeeks: Max Sum Subarray of Size K
  * Difficulty: Easy
  * Language: Java
  * Date: 2026-07-21T21:16:44.074Z
