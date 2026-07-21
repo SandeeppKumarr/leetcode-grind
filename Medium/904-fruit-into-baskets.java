@@ -2,11 +2,12 @@
  * LeetCode #904: Fruit Into Baskets
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-21T18:58:14.717Z
+ * Date: 2026-07-21T18:59:27.803Z
  */
 
 class Solution {
     public int totalFruit(int[] fruits) {
+        if(fruits.length < 3) return fruits.length;
         int maxLength = -1;
         int left = 0;
         HashMap<Integer, Integer> frequency = new HashMap<>();
