@@ -2,7 +2,7 @@
  * LeetCode #1004: Max Consecutive Ones III
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-22T06:47:55.697Z
+ * Date: 2026-07-22T06:49:08.288Z
  */
 
 class Solution {
@@ -12,11 +12,11 @@ class Solution {
         int count = 0;
         for(int right = 0; right < nums.length; right++){
             if(nums[right] == 0) count++;
-            if(count > k){
+            while(count > k){
                 if(nums[left] == 0) count--;
                 left++;
             }
-            else maxLength = Math.max(maxLength, right - left + 1);
+            maxLength = Math.max(maxLength, right - left + 1);
         }
         return maxLength;
     }
