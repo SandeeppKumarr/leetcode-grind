@@ -2,7 +2,7 @@
  * LeetCode #424: Longest Repeating Character Replacement
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-22T06:31:49.423Z
+ * Date: 2026-07-22T06:32:05.034Z
  */
 
 class Solution {
