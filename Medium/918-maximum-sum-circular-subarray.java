@@ -1,0 +1,24 @@
+/**
+ * LeetCode #918: Maximum Sum Circular Subarray
+ * Difficulty: Medium
+ * Language: Java
+ * Date: 2026-07-25T21:05:12.448Z
+ */
+
+class Solution {
+    public int maxSubarraySumCircular(int[] nums) {
+        int minCurrSum = nums[0], maxCurrSum = nums[0], maxSum = nums[0], minSum = nums[0];
+        for(int i = 1; i < nums.length; i++){
+            maxCurrSum = Math.max(maxCurrSum + nums[i], nums[i]);
+            minCurrSum = Math.min(minCurrSum + nums[i], nums[i]);
+            maxSum = Math.max(maxCurrSum, maxSum);
+            minSum = Math.min(minCurrSum, minSum);
+        }
+        int sum = 0;
+        for (int num : nums) {
+            sum += num;
+        }
+        if(sum == minSum) return maxSum;
+        return Math.max(maxSum, sum - minSum);
+    }
+}
