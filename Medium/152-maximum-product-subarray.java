@@ -2,7 +2,7 @@
  * LeetCode #152: Maximum Product Subarray
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-25T17:20:43.708Z
+ * Date: 2026-07-25T17:23:57.797Z
  */
 
 class Solution {
