@@ -2,7 +2,7 @@
  * LeetCode #1749: Maximum Absolute Sum of Any Subarray
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-25T20:51:47.561Z
+ * Date: 2026-07-25T20:51:58.806Z
  */
 
 class Solution {
