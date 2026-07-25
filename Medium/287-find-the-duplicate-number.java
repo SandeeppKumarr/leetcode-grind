@@ -2,7 +2,7 @@
  * LeetCode #287: Find the Duplicate Number
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-25T12:54:04.059Z
+ * Date: 2026-07-25T12:55:12.716Z
  */
 
 class Solution {
@@ -15,8 +15,8 @@ class Solution {
         slow = 0;
         while(slow != fast){
             slow = nums[slow];
-            fast = nums[nums[fast]];
+            fast = nums[fast];
         }
-        return nums[slow];
+        return fast;
     }
 }
