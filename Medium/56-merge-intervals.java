@@ -2,7 +2,7 @@
  * LeetCode #56: Merge Intervals
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-09T04:45:21.891Z
+ * Date: 2026-07-29T19:34:07.196Z
  */
 
 class Solution {
