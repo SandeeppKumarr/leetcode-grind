@@ -2,7 +2,7 @@
  * LeetCode #724: Find Pivot Index
  * Difficulty: Easy
  * Language: Java
- * Date: 2026-07-29T12:00:19.740Z
+ * Date: 2026-07-29T12:02:33.541Z
  */
 
 class Solution {
