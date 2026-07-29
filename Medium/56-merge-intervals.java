@@ -2,15 +2,17 @@
  * LeetCode #56: Merge Intervals
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-29T20:15:52.324Z
+ * Date: 2026-07-29T20:16:56.358Z
  */
 
 class Solution {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         int[][] inserted = new int[intervals.length + 1][2];
         boolean insert = false;
+
         int j = 0;
-        if (!insert && (j == intervals.length || intervals[j][0] > newInterval[0])) {
+        for (int i = 0; i < inserted.length; i++) {
+            if (!insert && (j == intervals.length || intervals[j][0] > newInterval[0])) {
                 inserted[i][0] = newInterval[0];
                 inserted[i][1] = newInterval[1];
                 insert = true;
@@ -20,6 +22,7 @@ class Solution {
                 j++;
             }
         }
+
         List<int[]> merged = new ArrayList<>();
         int[] prev = inserted[0];
 
