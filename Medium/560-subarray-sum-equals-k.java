@@ -2,7 +2,7 @@
  * LeetCode #560: Subarray Sum Equals K
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-29T13:18:10.394Z
+ * Date: 2026-07-29T13:18:19.370Z
  */
 
 class Solution {
