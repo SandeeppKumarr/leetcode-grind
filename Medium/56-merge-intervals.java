@@ -2,35 +2,37 @@
  * LeetCode #56: Merge Intervals
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-29T19:34:07.196Z
+ * Date: 2026-07-29T20:15:52.324Z
  */
 
 class Solution {
-    public int[][] merge(int[][] intervals) {
-        //sort based on start time
-        Arrays.sort(intervals, (a,b) -> Integer.compare(a[0], b[0]));
-        // This is what the lambda syntax replaces:
-        // Arrays.sort(intervals, new Comparator<int[]>() {
-        //     @Override
-        //     public int compare(int[] a, int[] b) {
-        //         return Integer.compare(a[0], b[0]);
-        //     }
-        // });
-        List<int[]> merged = new ArrayList<>();
-        int[] prev = intervals[0];
-        for(int i = 1; i < intervals.length; i++){
-            // Overlap condition: current start <= previous end
-            if(intervals[i][0] <= prev[1]){
-                // Merge intervals
-                prev[1] = Math.max(prev[1], intervals[i][1]);
-            }
-            else{
-                // No overlap, add previous interval to result
-                merged.add(prev); 
-                prev = intervals[i];
+    public int[][] insert(int[][] intervals, int[] newInterval) {
+        int[][] inserted = new int[intervals.length + 1][2];
+        boolean insert = false;
+        int j = 0;
+        if (!insert && (j == intervals.length || intervals[j][0] > newInterval[0])) {
+                inserted[i][0] = newInterval[0];
+                inserted[i][1] = newInterval[1];
+                insert = true;
+            } else {
+                inserted[i][0] = intervals[j][0];
+                inserted[i][1] = intervals[j][1];
+                j++;
             }
         }
-        merged.add(prev); // Add the last interval
+        List<int[]> merged = new ArrayList<>();
+        int[] prev = inserted[0];
+
+        for (int i = 1; i < inserted.length; i++) {
+            if (inserted[i][0] <= prev[1]) {
+                prev[1] = Math.max(prev[1], inserted[i][1]);
+            } else {
+                merged.add(prev);
+                prev = inserted[i];
+            }
+        }
+
+        merged.add(prev);
         return merged.toArray(new int[merged.size()][]);
     }
 }
