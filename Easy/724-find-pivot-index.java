@@ -2,7 +2,7 @@
  * LeetCode #724: Find Pivot Index
  * Difficulty: Easy
  * Language: Java
- * Date: 2026-07-29T12:13:41.754Z
+ * Date: 2026-07-29T12:18:10.356Z
  */
 
 class Solution {
@@ -13,7 +13,8 @@ class Solution {
         }
         int prefixSum = 0;
         for(int i = 0; i < nums.length; i++){
-            if(prefixSum == (sum - nums[i] - prefixSum)) return i;
+            sum -= nums[i];
+            if(prefixSum == sum) return i;
             prefixSum += nums[i];
         }
         return -1;
