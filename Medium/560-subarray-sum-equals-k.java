@@ -2,7 +2,7 @@
  * LeetCode #560: Subarray Sum Equals K
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-29T13:18:19.370Z
+ * Date: 2026-07-29T13:19:26.499Z
  */
 
 class Solution {
@@ -13,9 +13,7 @@ class Solution {
         sums.put(0, 1);
         for(int num : nums){
             currSum += num;
-            if(sums.containsKey(currSum - k)){
-                count += sums.get(currSum - k);
-            }
+            count += sums.get(currSum - k);
             sums.put(currSum, sums.getOrDefault(currSum, 0) + 1);
         }
         return count;
