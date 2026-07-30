@@ -2,7 +2,7 @@
  * LeetCode #986: Interval List Intersections
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-07-30T07:25:50.661Z
+ * Date: 2026-07-30T07:25:56.981Z
  */
 
 class Solution {
