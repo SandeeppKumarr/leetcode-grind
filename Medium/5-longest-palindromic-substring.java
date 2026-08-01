@@ -2,37 +2,35 @@
  * LeetCode #5: Longest Palindromic Substring
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-08-01T18:08:10.792Z
+ * Date: 2026-08-01T18:09:17.275Z
  */
 
 class Solution {
     public String longestPalindrome(String s) {
-        if (s == null || s.length() == 0) {
-            return "";
-        }
+        int n = s.length();
+        String res = "";
 
-        int start = 0;
-        int end = 0;
-
-        for (int i = 0; i < s.length(); i++) {
-            int odd = expandAroundCenter(s, i, i);
-            int even = expandAroundCenter(s, i, i + 1);
-            int max_len = Math.max(odd, even);
-
-            if (max_len > end - start) {
-                start = i - (max_len - 1) / 2;
-                end = i + max_len / 2;
+        for(int i = 0;i<n;i++){
+            // Odd length palindrome
+            int st = i,end = i;
+            while(st>=0&&end<n&&s.charAt(st)==s.charAt(end)){
+                st--;
+                end++;
             }
+            String temp = s.substring(st+1,end);
+            if(temp.length()>res.length())res=temp;
+
+            // Even length palindrome
+            st = i;
+            end = i+1;
+            while(st>=0&&end<n&&s.charAt(st)==s.charAt(end)){
+                st--;
+                end++;
+            }
+            temp = s.substring(st+1,end);
+            if(temp.length()>res.length())res=temp;
         }
 
-        return s.substring(start, end + 1);        
+        return res;
     }
-
-    private int expandAroundCenter(String s, int left, int right) {
-        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-            left--;
-            right++;
-        }
-        return right - left - 1;
-    }    
 }
