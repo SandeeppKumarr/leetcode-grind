@@ -2,7 +2,7 @@
  * LeetCode #20: Valid Parentheses
  * Difficulty: Easy
  * Language: Java
- * Date: 2026-08-02T11:33:32.128Z
+ * Date: 2026-08-02T11:35:18.647Z
  */
 
 class Solution {
@@ -14,9 +14,9 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         for(char c : s.toCharArray()){
             int size = sb.length();
-            if(size > 0 && sb.charAt(size - 1) == paran.getOrDefault(c, c)) sb.deleteCharAt(size - 1);
+            if(size > 0 && paran.containsKey(c) && sb.charAt(size - 1) == paran.get(c)) sb.deleteCharAt(size - 1);
             else sb.append(c);
         }
-        return sb.length() > 0 ? false : true;
+        return sb.length() == 0;
     }
 }
