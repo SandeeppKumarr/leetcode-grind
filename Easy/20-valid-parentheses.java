@@ -2,21 +2,31 @@
  * LeetCode #20: Valid Parentheses
  * Difficulty: Easy
  * Language: Java
- * Date: 2026-08-02T11:35:18.647Z
+ * Date: 2026-08-02T11:36:36.014Z
  */
 
 class Solution {
     public boolean isValid(String s) {
-        Map<Character, Character> paran = new HashMap<>();
-        paran.put(')', '(');
-        paran.put(']', '[');
-        paran.put('}', '{');
-        StringBuilder sb = new StringBuilder();
-        for(char c : s.toCharArray()){
-            int size = sb.length();
-            if(size > 0 && paran.containsKey(c) && sb.charAt(size - 1) == paran.get(c)) sb.deleteCharAt(size - 1);
-            else sb.append(c);
+        Stack<Character> stack = new Stack<>();
+        for (char ch : s.toCharArray()) {
+            if (ch == '(' || ch == '[' || ch == '{') {
+                stack.push(ch);
+            } else {
+                if (stack.isEmpty()) {
+                    return false;
+                }
+                char top = stack.pop();
+                if (ch == ')' && top != '(') {
+                    return false;
+                }
+                if (ch == ']' && top != '[') {
+                    return false;
+                }
+                if (ch == '}' && top != '{') {
+                    return false;
+                }
+            }
         }
-        return sb.length() == 0;
+        return stack.isEmpty();
     }
 }
