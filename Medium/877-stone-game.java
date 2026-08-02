@@ -2,7 +2,7 @@
  * LeetCode #877: Stone Game
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-08-02T18:03:37.375Z
+ * Date: 2026-08-02T18:04:02.951Z
  */
 
 class Solution {
