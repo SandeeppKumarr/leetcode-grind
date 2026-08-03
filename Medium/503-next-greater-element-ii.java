@@ -2,12 +2,9 @@
  * LeetCode #503: Next Greater Element II
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-08-03T18:02:32.857Z
+ * Date: 2026-08-03T18:04:47.015Z
  */
 
-        // Iterate from right to left across a logical array of length 2*n
-        for (int i = 2 * n - 1; i >= 0; i--) {
-            int current = nums[i % n];
 
             // Pop all elements that are <= current, because they can't be next greater
             while (!st.isEmpty() && st.peek() <= current) {
@@ -20,9 +17,12 @@
             }
 
             // Push current as a candidate for earlier elements
+            int current = nums[i % n];
+        // Iterate from right to left across a logical array of length 2*n
+        for (int i = 2 * n - 1; i >= 0; i--) {
 
-        Stack<Integer> st = new Stack<>(); // will store values (could store indices too)
         int[] nge = new int[n];
+        Stack<Integer> st = new Stack<>();
         int n = nums.length;
     public int[] nextGreaterElements(int[] nums) {
 class Solution {
