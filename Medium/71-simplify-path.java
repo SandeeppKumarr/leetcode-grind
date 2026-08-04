@@ -2,7 +2,7 @@
  * LeetCode #71: Simplify Path
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-08-04T11:22:26.857Z
+ * Date: 2026-08-04T11:25:17.823Z
  */
 
 class Solution {
