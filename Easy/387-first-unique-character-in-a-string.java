@@ -2,7 +2,7 @@
  * LeetCode #387: First Unique Character in a String
  * Difficulty: Easy
  * Language: Java
- * Date: 2026-08-04T11:34:53.483Z
+ * Date: 2026-08-04T11:35:03.085Z
  */
 
 class Solution {
