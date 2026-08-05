@@ -2,7 +2,7 @@
  * LeetCode #409: Longest Palindrome
  * Difficulty: Easy
  * Language: Java
- * Date: 2026-08-05T05:41:36.164Z
+ * Date: 2026-08-05T05:44:09.021Z
  */
 
 class Solution {
@@ -15,7 +15,7 @@ class Solution {
 
         int length = 0;
         for (int count : freq) {
-            length += (count / 2) * 2;
+            length += (count / 2) * 2; //for even we add count, and for odd it will become count - 1
             if (length % 2 == 0 && count % 2 == 1) {
                 length++;
             }
