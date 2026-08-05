@@ -2,7 +2,7 @@
  * LeetCode #409: Longest Palindrome
  * Difficulty: Easy
  * Language: Java
- * Date: 2026-08-05T05:40:01.244Z
+ * Date: 2026-08-05T05:40:21.729Z
  */
 
 class Solution {
