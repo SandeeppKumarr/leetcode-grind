@@ -2,7 +2,7 @@
  * LeetCode #1209: Remove All Adjacent Duplicates in String II
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-08-07T16:12:06.827Z
+ * Date: 2026-08-07T16:12:25.374Z
  */
 
 class Solution {
@@ -22,7 +22,7 @@ class Solution {
                 }
             }
             else sb.append(ch);
-            System.out.println(sb.toString());
+            //System.out.println(sb.toString());
         }
         return sb.toString();
     }
