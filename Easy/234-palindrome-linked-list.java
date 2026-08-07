@@ -2,10 +2,20 @@
  * LeetCode #234: Palindrome Linked List
  * Difficulty: Easy
  * Language: Java
- * Date: 2026-08-07T08:54:49.769Z
+ * Date: 2026-08-07T09:00:03.727Z
  */
 
-class Solution {
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+cclass Solution {
     public boolean isPalindrome(ListNode head) {
         ListNode slow = head, fast = head, prev, temp;
         while (fast != null && fast.next != null) {
