@@ -2,7 +2,7 @@
  * LeetCode #875: Koko Eating Bananas
  * Difficulty: Medium
  * Language: Java
- * Date: 2026-08-09T09:03:55.854Z
+ * Date: 2026-08-09T09:04:15.528Z
  */
 
 class Solution {
@@ -17,7 +17,7 @@ class Solution {
         while(low <= high){
             int mid = low + (high - low) / 2;
 
-            int hours = 0;
+            long hours = 0;
             for(int pile : piles){
                 hours += pile / mid;
                 if(pile % mid != 0) hours++;
